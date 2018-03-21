@@ -42,6 +42,6 @@ public class Preprocessor {
             Files.walk(Paths.get(path)).filter(d -> d.toFile().getName().endsWith(".csv")).forEach(file -> resultado.add(file.toUri().getPath()));
         }
         return resultado;
-    }
+    }   
 
 }
