@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.hamcrest.Matchers;
 import org.hamcrest.collection.IsIterableContainingInAnyOrder;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -68,4 +69,13 @@ public class PreprocessorTest {
         Assert.assertEquals(expected.size(),list.size());        
         Assert.assertThat(list,IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
+    
+    @Test()
+    public void helloWorldTest(){
+        String expected = "Hello";
+        Preprocessor p = new Preprocessor();
+        Assert.assertThat(p.helloWorld(),Matchers.is(expected));
+        
+    }
+    
 }
